@@ -1,0 +1,7 @@
+{
+    "Version":0.4,
+    "ComponentID": "KinectNW",
+    "CameraSerial":"",
+    "SharedDataPath":"N:/",
+    "SharedConfigPath":"N:/Global_Config.json"
+}

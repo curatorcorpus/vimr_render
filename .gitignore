@@ -7,3 +7,5 @@ Saved/*
 *.sln
 .vs/*
 
+Telepresence/*
+WindowsNoEditor/*

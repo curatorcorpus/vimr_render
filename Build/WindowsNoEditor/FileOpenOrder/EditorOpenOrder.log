@@ -1757,126 +1757,131 @@
 "D:/vimr_render/Content/VirtualReality/Meshes/BeamMesh.uasset" 1757
 "D:/vimr_render/Content/VirtualReality/Meshes/SM_FatCylinder.uasset" 1758
 "D:/vimr_render/Content/Maps/TelepresenceMenu.umap" 1759
-"D:/vimr_render/Content/UI/TelepresenceMenu_UI.uasset" 1760
-"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 1761
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/2/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__2E8FD4818E87EB66F7FD22E64CE4D07241813E69.udd" 1762
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 1763
-"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 1764
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/0/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__D074342E2A6E6D7B84F6E40AF1F472C7900FA603.udd" 1765
-"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 1766
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/0/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__7E197E532E2B857C6A691685858EB03F3CD71830.udd" 1767
-"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 1768
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/6/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__1BB08CB1AA0F50E02AF0A7DB11E4303C73ACF883.udd" 1769
-"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 1770
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/3/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__1C2A796A13CB63323642AF2C75C7D13C80C5584C.udd" 1771
-"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 1772
-"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 1773
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/3/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__DE898770D1521FF861E934E281C14D20103B7857.udd" 1774
-"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 1775
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/5/8/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__E94F1FDCA21B75A1D190B49564A681C29EFDE6AB.udd" 1776
-"../../../Engine/Content/EditorResources/BSPVertex.uasset" 1777
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 1778
-"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 1779
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 1780
-"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 1781
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 1782
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 1783
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 1784
-"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 1785
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 1786
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 1787
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 1788
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 1789
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 1790
-"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 1791
-"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 1792
-"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 1793
-"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 1794
-"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 1795
-"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 1796
-"../../../Engine/Content/Maps/Entry.umap" 1797
-"D:/vimr_render/Content/VirtualRealityBP/Maps/UDPRender.umap" 1798
-"D:/vimr_render/Content/VirtualRealityBP/Maps/StartupMap.umap" 1799
-"D:/vimr_render/Content/VirtualRealityBP/Maps/StartupMap_BuiltData.uasset" 1800
-"D:/vimr_render/Content/VirtualReality/Materials/GenericHMDMaterial.uasset" 1801
-"D:/vimr_render/Content/VirtualReality/Materials/M_BaseMaterial.uasset" 1802
-"D:/vimr_render/Content/VirtualReality/Materials/MI_BaseMaterial2.uasset" 1803
-"D:/vimr_render/Content/VirtualReality/Materials/MI_BaseMaterial3.uasset" 1804
-"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 1805
-"D:/vimr_render/Content/VirtualReality/Meshes/GenericHMD.uasset" 1806
-"../../../Engine/Content/EditorResources/EmptyActor.uasset" 1807
-"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 1808
-"D:/vimr_render/Content/VirtualRealityBP/Maps/HMDLocomotionMap.umap" 1809
-"D:/vimr_render/Content/VirtualRealityBP/Blueprints/HMDLocomotionPawn.uasset" 1810
-"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 1811
-"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 1812
-"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 1813
-"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 1814
-"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 1815
-"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 1816
-"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 1817
-"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 1818
-"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 1819
-"D:/vimr_render/Content/VirtualRealityBP/Maps/HMDLocomotionMap_BuiltData.uasset" 1820
-"D:/vimr_render/Content/Geometry/Meshes/1M_Cube.uasset" 1821
-"D:/vimr_render/Content/Geometry/Meshes/CubeMaterial.uasset" 1822
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/8/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__1D4DD6843AD92CBEECCAC76F9FD085E7A849AFC6.udd" 1823
-"D:/vimr_render/Content/Maps/VoxelVideo.umap" 1824
-"D:/vimr_render/Content/VoxelVideoActor.uasset" 1825
-"D:/vimr_render/Content/Maps/VoxelVideo_BuiltData.uasset" 1826
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F37F87C4F517F73D23D21B1169D3__9E249619C0FEB4FD47CC529B647C9CA64B45DC55.udd" 1827
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_D4A7EB254EA1C36C7E91FF9CB27E31DC__0DD5391DFA1A04A48556DABB8CEACCA390E73912.udd" 1828
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/9/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_D49F80954A8BCD5EB6CC9B9140DC4A74_0__35F1F8C2B51E977A3B7EB38A4AAE7468275D3612.udd" 1829
-"D:/vimr_render/Content/Maps/UDPViewerWASD.umap" 1830
-"D:/vimr_render/Content/Maps/WASD_Mode.uasset" 1831
-"D:/vimr_render/Content/VoxelUDPActor.uasset" 1832
-"D:/vimr_render/Content/Maps/UDPViewerOrbit.umap" 1833
-"D:/vimr_render/Content/Maps/Orbit_Mode.uasset" 1834
-"D:/vimr_render/Content/Maps/OrbitPawn.uasset" 1835
-"D:/vimr_render/Content/Maps/Telepresence.umap" 1836
-"D:/vimr_render/Content/Origin.uasset" 1837
-"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 1838
-"D:/vimr_render/Content/xAxisRed.uasset" 1839
-"D:/vimr_render/Content/yAxisGreen.uasset" 1840
-"D:/vimr_render/Content/zAxisBlue.uasset" 1841
-"D:/vimr_render/Content/Maps/Telepresence_BuiltData.uasset" 1842
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/8/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__730BD3A4B2B6CF6C29EACE515A32127B852EEE38.udd" 1843
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/4/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__375B42554B6573E2CAFAA2AFDFD410977B28A289.udd" 1844
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/0/1/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__24A9DBAE5FC717FEF6112C285300575055EF5C25.udd" 1845
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/5/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__F56F55664117AD2CAC00458B3EC7FF80C00DDF34.udd" 1846
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/9/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__AD979FBE9CA1EA306C0B68D8F2E8C823281B6A4D.udd" 1847
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/1/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__25C8BCDA95C0AFE56DAE0B38E436EE194FAF9D7B.udd" 1848
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/3/9/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__4E20DA83B782D50E8A479F8A949731C78ACAE5BD.udd" 1849
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/5/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_174CC50C443D274D969BDC85B49FF__E2EDC735A93097B88C9550AB07FC5C0AC5DC7195.udd" 1850
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/0/3/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_B7BC3BC9494F8ADA3CF5C89AB13521EF__F940FD046FE04ED29E182C9736791F45E5D4E5A0.udd" 1851
-"D:/vimr_render/Plugins/Voxels/Content/UnitCubesOffset.uasset" 1852
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/1/STATICMESH_8CAD439CF4B14211ACC831AE9C7C98BC_228332BAE0224DD294E232B87D83948F1$__614C871F4508C6126CAA021CD74D2D0CB30E5D2E.udd" 1853
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/4/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_E7331226409D1F3C6__AF9762761769231262EAC3744DD719D3DD7AA1CE.udd" 1854
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/0/0/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_E7331226409D1F3C640769B6F61898B__DBAC9B3C54D23EF01E458020361091F45D0DA508.udd" 1855
-"D:/vimr_render/Content/VirtualRealityBP/Blueprints/VirtualRealityPawn.uasset" 1856
-"D:/vimr_render/Content/VirtualRealityBP/Blueprints/BP_PickupCube.uasset" 1857
-"D:/vimr_render/Content/VirtualReality/Materials/MI_SmallCubes.uasset" 1858
-"D:/vimr_render/Content/Geometry/Meshes/TemplateFloor.uasset" 1859
-"D:/vimr_render/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 1860
-"D:/vimr_render/Content/Reoriented_HCI_Fri.uasset" 1861
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/2/STATICMESH_8CAD439CF4B14211ACC831AE9C7C98BC_228332BAE0224DD294E232B87D83948F1$__A48F3ED305EC9921BF8432C2141E83851A06D0DB.udd" 1862
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/7/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_7DF3C356436D1E431__645341E850D7D4F5CE8305B0F0029949E82A2DE1.udd" 1863
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/8/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_7DF3C356436D1E43153114BCC24E976__5636D332FF4B838712A4E2BF0E7A7502A17C1A1E.udd" 1864
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Manage_Mode.uasset" 1865
-"../../../Engine/Content/Tutorial/Landscape/LandscapeWalkThrough.uasset" 1866
-"../../../Engine/Content/Tutorial/SubEditors/MaterialEditorTutorial.uasset" 1867
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 1868
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/8/9/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__9208B078C6B5E081B0F432DD23CE13DE8DB09B60.udd" 1869
-"../../../Engine/Content/Tutorial/Paper2D/FlipbookEditorTutorial.uasset" 1870
-"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 1871
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 1872
-"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintMacroLibrariesEditorOverview.uasset" 1873
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 1874
-"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 1875
-"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 1876
-"../../../Engine/Content/Tutorial/SubEditors/ParticleSystemEditorTutorial.uasset" 1877
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 1878
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 1879
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 1880
-"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 1881
-"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/5/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__9B0E06EE0B24902B032B9AA70C3B75298F9937C1.udd" 1882
+"D:/vimr_render/Content/Maps/TelepresenceMenu_BuiltData.uasset" 1760
+"D:/vimr_render/Content/UI/TelepresenceMenu_UI.uasset" 1761
+"../../../Engine/Content/EngineMaterials/EditorBrushMaterial.uasset" 1762
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/3/2/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__2E8FD4818E87EB66F7FD22E64CE4D07241813E69.udd" 1763
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicatorMaterial.uasset" 1764
+"../../../Engine/Content/EditorMaterials/PreviewShadowIndicator.uasset" 1765
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/6/0/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__D074342E2A6E6D7B84F6E40AF1F472C7900FA603.udd" 1766
+"../../../Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset" 1767
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/7/0/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__7E197E532E2B857C6A691685858EB03F3CD71830.udd" 1768
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial_WF.uasset" 1769
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/6/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__1BB08CB1AA0F50E02AF0A7DB11E4303C73ACF883.udd" 1770
+"../../../Engine/Content/EngineDebugMaterials/ClothMaterial.uasset" 1771
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/9/3/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__1C2A796A13CB63323642AF2C75C7D13C80C5584C.udd" 1772
+"../../../Engine/Content/EngineDebugMaterials/BoneWeightMaterial.uasset" 1773
+"../../../Engine/Content/EngineDebugMaterials/HeatmapGradient.uasset" 1774
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/6/3/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__DE898770D1521FF861E934E281C14D20103B7857.udd" 1775
+"../../../Engine/Content/EngineDebugMaterials/GeomMaterial.uasset" 1776
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/5/8/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__E94F1FDCA21B75A1D190B49564A681C29EFDE6AB.udd" 1777
+"../../../Engine/Content/EditorResources/BSPVertex.uasset" 1778
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset" 1779
+"../../../Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset" 1780
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickOutter.uasset" 1781
+"../../../Engine/Content/MobileResources/HUD/T_Castle_ThumbstickInner.uasset" 1782
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionStick.uasset" 1783
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad3.uasset" 1784
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad2.uasset" 1785
+"../../../Engine/Content/MobileResources/HUD/MobileHUDDirectionPad.uasset" 1786
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButtonFire.uasset" 1787
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton3.uasset" 1788
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_on.uasset" 1789
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton2_off.uasset" 1790
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_on.uasset" 1791
+"../../../Engine/Content/MobileResources/HUD/MobileHUDButton1_off.uasset" 1792
+"../../../Engine/Content/MobileResources/HUD/LeftVirtualJoystickOnly.uasset" 1793
+"../../../Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset" 1794
+"../../../Engine/Content/MobileResources/HUD/AnalogHat.uasset" 1795
+"../../../Engine/Content/MobileResources/T_MobileMenu2.uasset" 1796
+"../../../Engine/Content/MobileResources/T_MobileControls_texture.uasset" 1797
+"../../../Engine/Content/Maps/Entry.umap" 1798
+"D:/vimr_render/Content/VirtualRealityBP/Maps/UDPRender.umap" 1799
+"D:/vimr_render/Content/VirtualRealityBP/Maps/StartupMap.umap" 1800
+"D:/vimr_render/Content/VirtualRealityBP/Maps/StartupMap_BuiltData.uasset" 1801
+"D:/vimr_render/Content/VirtualReality/Materials/GenericHMDMaterial.uasset" 1802
+"D:/vimr_render/Content/VirtualReality/Materials/M_BaseMaterial.uasset" 1803
+"D:/vimr_render/Content/VirtualReality/Materials/MI_BaseMaterial2.uasset" 1804
+"D:/vimr_render/Content/VirtualReality/Materials/MI_BaseMaterial3.uasset" 1805
+"../../../Engine/Content/MapTemplates/Sky/DaylightAmbientCubemap.uasset" 1806
+"D:/vimr_render/Content/VirtualReality/Meshes/GenericHMD.uasset" 1807
+"../../../Engine/Content/EditorResources/EmptyActor.uasset" 1808
+"../../../Engine/Content/EditorResources/LightIcons/S_LightError.uasset" 1809
+"D:/vimr_render/Content/VirtualRealityBP/Maps/HMDLocomotionMap.umap" 1810
+"D:/vimr_render/Content/VirtualRealityBP/Blueprints/HMDLocomotionPawn.uasset" 1811
+"../../../Engine/Content/EngineSky/BP_Sky_Sphere.uasset" 1812
+"../../../Engine/Content/EngineSky/C_Sky_Cloud_Color.uasset" 1813
+"../../../Engine/Content/EngineSky/C_Sky_Horizon_Color.uasset" 1814
+"../../../Engine/Content/EngineSky/C_Sky_Zenith_Color.uasset" 1815
+"../../../Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset" 1816
+"../../../Engine/Content/EngineSky/T_Sky_Blue.uasset" 1817
+"../../../Engine/Content/EngineSky/T_Sky_Clouds_M.uasset" 1818
+"../../../Engine/Content/EngineSky/T_Sky_Stars.uasset" 1819
+"../../../Engine/Content/EngineSky/SM_SkySphere.uasset" 1820
+"D:/vimr_render/Content/VirtualRealityBP/Maps/HMDLocomotionMap_BuiltData.uasset" 1821
+"D:/vimr_render/Content/Geometry/Meshes/1M_Cube.uasset" 1822
+"D:/vimr_render/Content/Geometry/Meshes/CubeMaterial.uasset" 1823
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/1/8/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__1D4DD6843AD92CBEECCAC76F9FD085E7A849AFC6.udd" 1824
+"D:/vimr_render/Content/Maps/VoxelVideo.umap" 1825
+"D:/vimr_render/Content/VoxelVideoActor.uasset" 1826
+"D:/vimr_render/Content/Actors/VoxelVideoActor.uasset" 1827
+"D:/vimr_render/Content/Maps/VoxelVideo_BuiltData.uasset" 1828
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/7/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_7F37F87C4F517F73D23D21B1169D3__9E249619C0FEB4FD47CC529B647C9CA64B45DC55.udd" 1829
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/1/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_D4A7EB254EA1C36C7E91FF9CB27E31DC__0DD5391DFA1A04A48556DABB8CEACCA390E73912.udd" 1830
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/0/9/TEXTURE_814DCC3DC72143F49509781513CB9855_G8_D49F80954A8BCD5EB6CC9B9140DC4A74_0__35F1F8C2B51E977A3B7EB38A4AAE7468275D3612.udd" 1831
+"D:/vimr_render/Content/Maps/UDPViewerWASD.umap" 1832
+"D:/vimr_render/Content/Maps/WASD_Mode.uasset" 1833
+"D:/vimr_render/Content/VoxelUDPActor.uasset" 1834
+"D:/vimr_render/Content/Actors/VoxelUDPActor.uasset" 1835
+"D:/vimr_render/Content/Maps/UDPViewerOrbit.umap" 1836
+"D:/vimr_render/Content/Maps/Orbit_Mode.uasset" 1837
+"D:/vimr_render/Content/Maps/OrbitPawn.uasset" 1838
+"D:/vimr_render/Content/Maps/Telepresence.umap" 1839
+"../../../Engine/Content/EditorBlueprintResources/ActorMacros.uasset" 1840
+"D:/vimr_render/Content/Geometry/Origin.uasset" 1841
+"../../../Engine/Content/BasicShapes/BasicShapeMaterial.uasset" 1842
+"D:/vimr_render/Content/Materials/xAxisRed.uasset" 1843
+"D:/vimr_render/Content/Materials/yAxisGreen.uasset" 1844
+"D:/vimr_render/Content/Materials/zAxisBlue.uasset" 1845
+"D:/vimr_render/Content/Maps/Telepresence_BuiltData.uasset" 1846
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/1/8/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__730BD3A4B2B6CF6C29EACE515A32127B852EEE38.udd" 1847
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/8/4/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__375B42554B6573E2CAFAA2AFDFD410977B28A289.udd" 1848
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/0/1/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__24A9DBAE5FC717FEF6112C285300575055EF5C25.udd" 1849
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/0/5/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__F56F55664117AD2CAC00458B3EC7FF80C00DDF34.udd" 1850
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/1/8/9/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__AD979FBE9CA1EA306C0B68D8F2E8C823281B6A4D.udd" 1851
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/0/1/1/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__25C8BCDA95C0AFE56DAE0B38E436EE194FAF9D7B.udd" 1852
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/7/3/9/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM4_7__BC5N_NOCCBN_DEV_SL_DBUF_UN__4E20DA83B782D50E8A479F8A949731C78ACAE5BD.udd" 1853
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/6/1/9/TEXTURE_814DCC3DC72143F49509781513CB9855_AUTODXT_08196C5247C761EA9908588B9260D__5CFA9DC63664D50256AA9A3883849FCB4881E575.udd" 1854
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/8/6/TEXTURE_814DCC3DC72143F49509781513CB9855_DXT1_7440D6744969F4470FABE9A2C6B1D0D0__A8C16911E7ABD7D152A3A6027941DFE1019BF0B1.udd" 1855
+"D:/vimr_render/Plugins/Voxels/Content/UnitCubesOffset.uasset" 1856
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/8/1/1/STATICMESH_8CAD439CF4B14211ACC831AE9C7C98BC_228332BAE0224DD294E232B87D83948F1$__614C871F4508C6126CAA021CD74D2D0CB30E5D2E.udd" 1857
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/2/1/4/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_E7331226409D1F3C6__AF9762761769231262EAC3744DD719D3DD7AA1CE.udd" 1858
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/0/0/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_E7331226409D1F3C640769B6F61898B__DBAC9B3C54D23EF01E458020361091F45D0DA508.udd" 1859
+"D:/vimr_render/Content/VirtualRealityBP/Blueprints/VirtualRealityPawn.uasset" 1860
+"D:/vimr_render/Content/VirtualRealityBP/Blueprints/BP_PickupCube.uasset" 1861
+"D:/vimr_render/Content/VirtualReality/Materials/MI_SmallCubes.uasset" 1862
+"D:/vimr_render/Content/Geometry/Meshes/TemplateFloor.uasset" 1863
+"D:/vimr_render/Content/Geometry/Meshes/1M_Cube_Chamfer.uasset" 1864
+"D:/vimr_render/Content/Geometry/Reoriented_HCI_Fri.uasset" 1865
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/4/7/2/STATICMESH_8CAD439CF4B14211ACC831AE9C7C98BC_228332BAE0224DD294E232B87D83948F1$__A48F3ED305EC9921BF8432C2141E83851A06D0DB.udd" 1866
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/7/8/NAVCOLLISION_B89838347A4348138EE337A847529C5C_NAVCOLLISION_X_7DF3C356436D1E431__645341E850D7D4F5CE8305B0F0029949E82A2DE1.udd" 1867
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/5/2/8/PHYSX_0A50D9145BC447B69254BED33438406D_PHYSXPC_7DF3C356436D1E43153114BCC24E976__5636D332FF4B838712A4E2BF0E7A7502A17C1A1E.udd" 1868
+"D:/vimr_render/Content/Origin.uasset" 1869
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Manage_Mode.uasset" 1870
+"../../../Engine/Content/Tutorial/Landscape/LandscapeWalkThrough.uasset" 1871
+"../../../Engine/Content/Tutorial/SubEditors/MaterialEditorTutorial.uasset" 1872
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialMaterial.uasset" 1873
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/3/8/9/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__9208B078C6B5E081B0F432DD23CE13DE8DB09B60.udd" 1874
+"../../../Engine/Content/Tutorial/Paper2D/FlipbookEditorTutorial.uasset" 1875
+"../../../Engine/Content/Tutorial/Paper2D/TutorialAssets/Paper2DFlipbook_TutorialIcon.uasset" 1876
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Sculpt_Mode.uasset" 1877
+"../../../Engine/Content/Tutorial/BlueprintTutorials/BlueprintMacroLibrariesEditorOverview.uasset" 1878
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/BlueprintMacroLibrary_64x.uasset" 1879
+"../../../Engine/Content/Tutorial/BlueprintTutorials/TutorialAssets/Tutorial_BP_MacroLib.uasset" 1880
+"../../../Engine/Content/Tutorial/Landscape/Landscape_Painting_Mode.uasset" 1881
+"../../../Engine/Content/Tutorial/SubEditors/ParticleSystemEditorTutorial.uasset" 1882
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/TutorialParticleSystem.uasset" 1883
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/M_smoke_subUV_blackbody.uasset" 1884
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_SmokeSubUV_8X8.uasset" 1885
+"../../../Engine/Content/Tutorial/SubEditors/TutorialAssets/T_soft_smoke.uasset" 1886
+"C:/Users/HCI Lab/AppData/Local/UnrealEngine/Common/DerivedDataCache/9/5/5/MATSM_00C21D1DE462418ABCDF262EC737C276_PCD3D_SM5_7__BC5N_NOCCBN_DEV_SL_VRIS_DB__9B0E06EE0B24902B032B9AA70C3B75298F9937C1.udd" 1887
