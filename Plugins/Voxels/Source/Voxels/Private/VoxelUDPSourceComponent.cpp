@@ -29,11 +29,11 @@ void UVoxelUDPSourceComponent::BeginPlay()
 		UE_LOG(VoxLog, Warning, TEXT("%s"), *msg);
 		UKismetSystemLibrary::QuitGame(GetWorld(), GetWorld()->GetFirstPlayerController(), EQuitPreference::Quit);
 	}
-	if (NetworkConfig.count(TCHAR_TO_ANSI(*ClientConfigID)) == 0) {
+	/*if (NetworkConfig.count(TCHAR_TO_ANSI(*ClientConfigID)) == 0) {
 		FString msg = FString("Network Config doesn't contain clientID key");
 		UE_LOG(VoxLog, Warning, TEXT("%s"), *msg);
 		UKismetSystemLibrary::QuitGame(GetWorld(), GetWorld()->GetFirstPlayerController(), EQuitPreference::Quit);
-	}
+	}*/
 	clientConfig = NetworkConfig[TCHAR_TO_ANSI(*ClientConfigID)];
 	voxelcallback = new Stu::AsyncCallback<VIMR::Octree, MESSAGE_BUFFER_COUNT>(std::bind(&UVoxelSourceBaseComponent::CopyVoxelData, this, _1));
 	deserializer = new VoxelDeserializer(voxelcallback);

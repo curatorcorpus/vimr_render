@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "VoxelSourceInterface.h"
 #include "VIMR/octree.hpp"
 #include "Voxels.h"

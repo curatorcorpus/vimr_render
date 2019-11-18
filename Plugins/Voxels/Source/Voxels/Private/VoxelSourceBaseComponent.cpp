@@ -100,7 +100,7 @@ void UVoxelSourceBaseComponent::BeginPlay()
 	UE_LOG(VoxLog, Log, TEXT("%s"), *startLogMsg);
 	VIMRconfig = new Stu::Config::ConfigFile();
 	FString localConfigFilePath = FPaths::ProjectDir() + FString(LOCAL_CONFIG_FILENAME);
-	
+	localConfigFilePath = IFileManager::Get().ConvertToAbsolutePathForExternalAppForRead(*localConfigFilePath);
 	if (!VIMRconfig->Load(TCHAR_TO_ANSI(*localConfigFilePath))) {
 		FString msg = FString("Failed to load config file: ") + localConfigFilePath;
 
