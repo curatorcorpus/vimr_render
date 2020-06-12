@@ -7,5 +7,6 @@ Saved/*
 *.sln
 .vs/*
 
-Telepresence/*
-WindowsNoEditor/*
+Content/Recordings/*
+Content/UserInterface/*
+Content/VoxelVideos/*

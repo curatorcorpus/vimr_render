@@ -6,9 +6,8 @@ public class Voxels : ModuleRules
 {
     public Voxels(ReadOnlyTargetRules Target) : base(Target)
 	{
-		
+		Definitions.Add("JSON_NOEXCEPTION");
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		bEnableExceptions = true;
 		string VIMR_ROOT = System.Environment.GetEnvironmentVariable("VIMR_ROOT");
 
 		PublicIncludePaths.AddRange(
@@ -29,11 +28,11 @@ public class Voxels : ModuleRules
         PublicAdditionalLibraries.AddRange(
             new string[]
             {
-				VIMR_ROOT + "/lib/NetworkUDP_Lib.lib",
+				VIMR_ROOT + "/lib/Network.lib",
 				VIMR_ROOT + "/lib/Voxels.lib",
 				VIMR_ROOT + "/lib/VoxelVideo.lib",
-				VIMR_ROOT + "/lib/VoxelsAsync.lib",
-				VIMR_ROOT + "/lib/NetworkCallbackTCP_Lib.lib"
+				VIMR_ROOT + "/lib/AsyncSerial.lib",
+				VIMR_ROOT + "/lib/UnrealConfigWrapper.lib"
             }
             );
 

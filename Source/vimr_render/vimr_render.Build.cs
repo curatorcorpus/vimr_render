@@ -6,24 +6,23 @@ using UnrealBuildTool;
 
 public class vimr_render : ModuleRules
 {
-	
 	public vimr_render(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-		bEnableExceptions = true;
-		string VIMR_ROOT = System.Environment.GetEnvironmentVariable("VIMR_ROOT");
+		string VIMR_ROOT = System.Environment.GetEnvironmentVariable("VIMR_ROOT_DEV");
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 		if(Target.Platform == UnrealTargetPlatform.Win64)
 		{
+			Definitions.Add("JSON_NOEXCEPTION");
 			string ProjectRoot = Directory.GetParent(ModuleDirectory).Parent.FullName;
 			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\Voxels.dll");
-			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\NetworkUDP_Lib.dll");
+			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\Network.dll");
 			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\VoxelVideo.dll");
-			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\VoxelsAsync.dll");
-			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\NetworkCallbackTCP_Lib.dll");
+			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\AsyncSerial.dll");
+			RuntimeDependencies.Add(ProjectRoot + @"\Binaries\Win64\UnrealConfigWrapper.dll");
 		}
 	}
 }
