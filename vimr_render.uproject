@@ -35,12 +35,8 @@
 			"Enabled": false
 		},
 		{
-			"Name": "OnlineSubsystemUtils",
-			"Enabled": false
-		},
-		{
-			"Name": "OnlineSubsystem",
-			"Enabled": false
+			"Name": "OnlineSubsystemOtago",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
