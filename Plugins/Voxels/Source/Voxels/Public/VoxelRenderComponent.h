@@ -5,7 +5,7 @@
 #include "VoxelSourceInterface.h"
 #include "VoxelRenderComponent.generated.h"
 
-#define TOTAL_VOXELS 393216
+#define TOTAL_VOXELS 196608
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class VOXELS_API UVoxelRenderComponent : public USceneComponent
