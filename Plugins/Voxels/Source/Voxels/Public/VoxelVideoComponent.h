@@ -52,6 +52,8 @@ public:
 		void Stop();
 	UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
 		void Restart();
+	//UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
+		//void SetLoop();
 
 	UPROPERTY(BlueprintAssignable, Category = "EventDispatchers")
 		FOnPlaybackFinished OnPlaybackFinished;
@@ -62,7 +64,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 		bool IsPaused = false;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-		bool Looping = true;
+		bool Looping = false;
 
 protected:
 
@@ -92,5 +94,5 @@ protected:
 	void _play();
 	void _stop();
 	void _restart();
-
+	void _setLoop(bool isLooping);
 };

@@ -47,7 +47,7 @@ void UVoxelVideoComponent::BeginPlay()
 	FString video_path = voxelvideo_dir + RecordingPath;
 
   	VoxelVideoReader = new VIMR::VoxVidPlayer(TCHAR_TO_ANSI(*video_path), std::bind(&UVoxelVideoComponent::CopyVoxelData, this, std::placeholders::_1));
-	VoxelVideoReader->Loop(false);
+	VoxelVideoReader->Loop(true);
 	UE_LOG(VoxVidLog, Log, TEXT("Loaded file %s"), *video_path);
 
 	VIMR::AudioStream tmp_astrm;
@@ -80,11 +80,17 @@ void UVoxelVideoComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 			UE_LOG(VoxVidLog, Log, TEXT("Playback Finished"));
 			VoxelVideoReader->Close();
 		}
+		else if(VoxelVideoReader->State() == VIMR::VoxVidPlayer::PlayState::Paused) {
+			UE_LOG(VoxVidLog, Log, TEXT("Playback is Paused"));
+		}
 	}
 
 	if (!audioVoxStack.empty()) {
 		AudioStreams.begin()->second->SetWorldTransform(FTransform(audioVoxStack.top()));
 		audioVoxStack.pop();
+	}
+	else if (VoxelVideoReader->State() == VIMR::VoxVidPlayer::PlayState::Paused) {
+		//UE_LOG(VoxVidLog, Log, TEXT("Playback is Paused"));
 	}
 
 	if (!cmdStack.empty()) {
@@ -133,6 +139,14 @@ void UVoxelVideoComponent::_restart()
 	for (auto i : AudioStreams) {
 		i.second->Stop();
 		i.second->Start();
+	}
+}
+
+void UVoxelVideoComponent::_setLoop(bool isLooping)
+{
+	if (VoxelVideoReader != NULL)
+	{
+		VoxelVideoReader->Loop(isLooping);
 	}
 }
 

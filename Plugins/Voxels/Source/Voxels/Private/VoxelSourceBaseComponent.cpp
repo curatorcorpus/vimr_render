@@ -53,6 +53,8 @@ void UVoxelSourceBaseComponent::CopyVoxelData(VIMR::VoxelGrid* voxels) {
 		}
 	}
 	
+	//UE_LOG(VoxLog, Log, TEXT("Total Voxels: %d"), VoxelCount[buffIdx]);
+
 	while (inDisplay)
 		;
 
