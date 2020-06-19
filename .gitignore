@@ -4,6 +4,7 @@ Intermediate/*
 Plugins/*/Binaries/*
 Plugins/*/Intermediate/*
 Saved/*
+WindowsNoEditor/*
 
 *.sln
 .vs/*

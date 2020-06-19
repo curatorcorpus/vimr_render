@@ -32,7 +32,6 @@ void UVoxelSourceBaseComponent::CopyVoxelData(VIMR::VoxelGrid* voxels) {
 		int16_t pX = node->pos.X;
 		int16_t pZ = node->pos.Z;
 
-
 		ColourData[buffIdx][pOffset + 0] = node->data[1];
 		ColourData[buffIdx][pOffset + 1] = node->data[2];
 		ColourData[buffIdx][pOffset + 2] = node->data[3];
@@ -40,9 +39,11 @@ void UVoxelSourceBaseComponent::CopyVoxelData(VIMR::VoxelGrid* voxels) {
 		CoarsePositionData[buffIdx][pOffset + 0] = (pZ >> 8) + 128;
 		CoarsePositionData[buffIdx][pOffset + 1] = (pY >> 8) + 128;
 		CoarsePositionData[buffIdx][pOffset + 2] = (pX >> 8) + 128;
+
 		PositionData[buffIdx][pOffset + 0] = pZ & 0xFF;
 		PositionData[buffIdx][pOffset + 1] = pY & 0xFF;
 		PositionData[buffIdx][pOffset + 2] = pX & 0xFF;
+
 		pOffset += VOXEL_TEXTURE_BPP;
 		VoxelCount[buffIdx]++;
 

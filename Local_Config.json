@@ -8,7 +8,7 @@
     "RSDGain": 156,
     "RSLaser": 200,
     "CameraSerial":"",
-    "SharedDataPath":"N:/",
-    "SharedConfigPath":"N:/GlobalConfig.json",
+    "SharedDataPath":"V:/instance_telepresence_noel/",
+    "SharedConfigPath":"V:/instance_telepresence_noel/Global_Config.json",
     "ConverterSourceFile": "C:/Users/stu/VIMR/vimr_mirror/voxvid.vox"
 }
