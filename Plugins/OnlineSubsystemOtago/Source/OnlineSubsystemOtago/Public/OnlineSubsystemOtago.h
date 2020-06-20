@@ -7,7 +7,7 @@
 #include "HAL/ThreadSafeCounter.h"
 
 /** sed for Logging Online Subsystem Otago messages */
-DECLARE_LOG_CATEGORY_EXTERN(LogOSSO, Log, All);
+//DECLARE_LOG_CATEGORY_EXTERN(LogOSSO, Log, All);
 
 /**
 * Online Subsystem Otago module implements  the OnlinIModuleInterface class. 

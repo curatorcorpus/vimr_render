@@ -427,12 +427,12 @@ uint32 FOnlineSessionOtago::CreateInternetSession(int32 HostingPlayerNum, FNamed
 		if (AddressURL.FindChar(':', PortCharIndex))
 		{
 			Port = FCString::Atoi(*AddressURL.RightChop(PortCharIndex + 1));
-			UE_LOG(LogOSSO, Display, TEXT("Using active port: %d!"), Port);
+			UE_LOG(LogOSSO, Display, TEXT("Using active port: %d on WAN!"), Port);
 		}
 		else
 		{
 			Port = 7777;
-			UE_LOG(LogOSSO, Warning, TEXT("Couldn't find port number, assuming port 7777"));
+			UE_LOG(LogOSSO, Warning, TEXT("Couldn't find port number, assuming port 7777 on WAN"));
 		}
 	}
 
@@ -442,6 +442,8 @@ uint32 FOnlineSessionOtago::CreateInternetSession(int32 HostingPlayerNum, FNamed
 		LocalIp = LocalAddr->ToString(false);
 		RequestJson->SetStringField("local_ip", LocalIp);
 		RequestJson->SetNumberField("local_port", Port);
+
+		UE_LOG(LogOSSO, Log, TEXT("Using Address: %s"), *LocalIp);
 	}
 
 	bool bUseStun = false;

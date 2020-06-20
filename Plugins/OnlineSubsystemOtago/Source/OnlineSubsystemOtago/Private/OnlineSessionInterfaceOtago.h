@@ -11,6 +11,8 @@
 #include "Http.h"
 #include "atomic"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogOSSO, Log, All);
+
 class FOnlineSubsystemOtago;
 
 class FOnlineSessionOtago : public IOnlineSession
