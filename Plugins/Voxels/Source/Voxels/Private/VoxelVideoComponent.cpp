@@ -65,7 +65,7 @@ void UVoxelVideoComponent::BeginPlay()
 		UE_LOG(VoxLog, Log, TEXT("Loaded wav: %s"), *wav_path);
 		UE_LOG(VoxLog, Log, TEXT("Loaded wav: %s"), *wav_label);
 	}
-	Play();
+	//Play();
 }
 
 // Called every frame
