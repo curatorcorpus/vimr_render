@@ -49,6 +49,8 @@ void URuntimeAudioSource::LoadWav(FString wavPath)
 		AudioComponent->bAutoDestroy = false;
 
 		AudioComponent->OnUpdateTransform(EUpdateTransformFlags::PropagateFromParent);
+		AudioComponent->SetIsReplicated(true);
+		AudioComponent->SetFlags(RF_MarkAsNative);
 	}
 	else
 	{
