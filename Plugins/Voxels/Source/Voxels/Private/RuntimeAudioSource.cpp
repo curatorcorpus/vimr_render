@@ -15,10 +15,12 @@ URuntimeAudioSource::URuntimeAudioSource()
 
 void URuntimeAudioSource::LoadWav(FString wavPath)
 {
+	// Sound Attenuation Settings
 	SoundAttenuation = NewObject<USoundAttenuation>();
 	SoundAttenuation->Attenuation.bAttenuate = 1;
 	SoundAttenuation->Attenuation.bSpatialize = 1;
 	SoundAttenuation->Attenuation.DistanceAlgorithm = EAttenuationDistanceModel::NaturalSound;
+	SoundAttenuation->Attenuation.FalloffDistance = 2500; // 2.5m, this depends on the environment and the playback sound loudness.
 
 	SoundWave = NewObject<USoundWaveProcedural>();
 	SoundWave->NumChannels = 1;
@@ -46,7 +48,6 @@ void URuntimeAudioSource::LoadWav(FString wavPath)
 		AudioComponent->bIsUISound = true;
 		AudioComponent->bAllowSpatialization = true;
 		AudioComponent->bAutoDestroy = false;
-
 		AudioComponent->OnUpdateTransform(EUpdateTransformFlags::PropagateFromParent);
 		AudioComponent->SetIsReplicated(true);
 		AudioComponent->SetFlags(RF_MarkAsNative);
