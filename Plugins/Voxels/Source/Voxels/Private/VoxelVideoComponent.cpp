@@ -12,6 +12,8 @@
 #include "Runtime/SlateCore/Public/Widgets/SWindow.h"
 #include "Paths.h"
 
+#include "HAL/FileManager.h"
+
 #include <chrono>
 
 using namespace std::placeholders;
@@ -148,6 +150,33 @@ void UVoxelVideoComponent::_setLoop(bool isLooping)
 	{
 		VoxelVideoReader->Loop(isLooping);
 	}
+}
+
+TArray<FString> UVoxelVideoComponent::GetAllRecordings()
+{
+	TArray<FString> files;
+	files.Empty();
+
+	FString recordingPath = FPaths::ProjectContentDir() + "VoxelVideos/";
+	FString voxelvideo_ext = "vx3";
+
+	if (FPaths::DirectoryExists(*recordingPath))
+	{
+		IFileManager::Get().FindFiles(files, *recordingPath, *voxelvideo_ext);
+
+		for (int i = 0; i < files.Num(); i++)
+		{
+			UE_LOG(LogTemp, Log, TEXT("These files Exists: %s"), *files[i]);
+		}
+
+		UE_LOG(LogTemp, Log, TEXT("This Path Exists: %s"), *recordingPath)
+	}
+	else
+	{
+		UE_LOG(LogTemp, Log, TEXT("This path doesn't exist"));
+	}
+
+	return files;
 }
 
 void UVoxelVideoComponent::Pause() { cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoComponent::_pause, this)); }

@@ -55,9 +55,12 @@ public:
 	//UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
 		//void SetLoop();
 
+	UFUNCTION(BlueprintCallable, Category = "FileManagement")
+		TArray<FString> GetAllRecordings();
+
 	UPROPERTY(BlueprintAssignable, Category = "EventDispatchers")
 		FOnPlaybackFinished OnPlaybackFinished;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadWrite,  EditAnywhere)
 		FString RecordingPath;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 		bool PlaybackFinished = false;
