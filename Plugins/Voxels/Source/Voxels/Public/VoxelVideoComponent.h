@@ -57,6 +57,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "FileManagement")
 		TArray<FString> GetAllRecordings();
+	UFUNCTION(BlueprintCallable, Category = "FileManagement")
+		void LoadVoxelVideo(FString filepath);
 
 	UPROPERTY(BlueprintAssignable, Category = "EventDispatchers")
 		FOnPlaybackFinished OnPlaybackFinished;
@@ -78,7 +80,8 @@ protected:
 	void OnPlaybackFinishedEvent();
 
 	uint32_t MaxVoxels = 196608;
-	FString FullRecordingPath;
+	
+	FString voxelvideosPath;
 
 	typedef std::function<void(void)> PlaybackControlFnPtr;
 

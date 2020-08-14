@@ -38,36 +38,15 @@ void UVoxelVideoComponent::BeginPlay()
 	char* datapath;
 	size_t dplen;
 
-	if(VIMRconfig->GetString("SharedDataPath", &datapath, dplen)){
+	voxelvideosPath = FPaths::ProjectContentDir() + FString("VoxelVideos/");
+
+	if(VIMRconfig->GetString("SharedDataPath", &datapath, dplen))
+	{
 
 	}
 	else{
 		//Exit game?
 	}
-
-	FString voxelvideo_dir = FPaths::ProjectContentDir() + FString("VoxelVideos/");
-	FString video_path = voxelvideo_dir + RecordingPath;
-
-  	VoxelVideoReader = new VIMR::VoxVidPlayer(TCHAR_TO_ANSI(*video_path), std::bind(&UVoxelVideoComponent::CopyVoxelData, this, std::placeholders::_1));
-	VoxelVideoReader->Loop(true);
-	UE_LOG(VoxVidLog, Log, TEXT("Loaded file %s"), *video_path);
-
-	VIMR::AudioStream tmp_astrm;
-	while(VoxelVideoReader->GetNextAudioStream(tmp_astrm))
-	{
-		URuntimeAudioSource* newSource = NewObject<URuntimeAudioSource>(this);
-		FString wav_path = voxelvideo_dir + FString(tmp_astrm.file_name);
-		FString wav_label = FString(tmp_astrm.voxel_label);
-
-		newSource->RegisterComponent();
-		newSource->AttachToComponent(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
-		newSource->LoadWav(wav_path);
-		AudioStreams[tmp_astrm.voxel_label] = newSource;
-
-		UE_LOG(VoxLog, Log, TEXT("Loaded wav: %s"), *wav_path);
-		UE_LOG(VoxLog, Log, TEXT("Loaded wav: %s"), *wav_label);
-	}
-	//Play();
 }
 
 // Called every frame
@@ -149,6 +128,36 @@ void UVoxelVideoComponent::_setLoop(bool isLooping)
 	if (VoxelVideoReader != NULL)
 	{
 		VoxelVideoReader->Loop(isLooping);
+	}
+}
+
+void UVoxelVideoComponent::LoadVoxelVideo(FString filepath)
+{
+	if (VoxelVideoReader != nullptr)
+	{
+		VoxelVideoReader->Close();
+	}
+
+	FString file_path = voxelvideosPath + RecordingPath;
+
+	VoxelVideoReader = new VIMR::VoxVidPlayer(TCHAR_TO_ANSI(*file_path), std::bind(&UVoxelVideoComponent::CopyVoxelData, this, std::placeholders::_1));
+	VoxelVideoReader->Loop(true);
+	UE_LOG(VoxVidLog, Log, TEXT("Loaded file %s"), *file_path);
+
+	VIMR::AudioStream tmp_astrm;
+	while (VoxelVideoReader->GetNextAudioStream(tmp_astrm))
+	{
+		URuntimeAudioSource* newSource = NewObject<URuntimeAudioSource>(this);
+		FString wav_path = voxelvideosPath + FString(tmp_astrm.file_name);
+		FString wav_label = FString(tmp_astrm.voxel_label);
+
+		newSource->RegisterComponent();
+		newSource->AttachToComponent(this, FAttachmentTransformRules(EAttachmentRule::KeepRelative, false));
+		newSource->LoadWav(wav_path);
+		AudioStreams[tmp_astrm.voxel_label] = newSource;
+
+		UE_LOG(VoxLog, Log, TEXT("Loaded wav: %s"), *wav_path);
+		UE_LOG(VoxLog, Log, TEXT("Loaded wav: %s"), *wav_label);
 	}
 }
 
