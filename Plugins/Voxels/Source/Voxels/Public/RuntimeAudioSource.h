@@ -47,6 +47,7 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 		float StartTimeSec;
 
+	void clear();
 
 protected:
 	// Called when the game starts

@@ -63,7 +63,7 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "EventDispatchers")
 		FOnPlaybackFinished OnPlaybackFinished;
 	UPROPERTY(BlueprintReadWrite,  EditAnywhere)
-		FString RecordingPath;
+		FString FileName;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 		bool PlaybackFinished = false;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
