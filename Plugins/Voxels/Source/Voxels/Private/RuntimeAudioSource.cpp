@@ -96,13 +96,13 @@ bool URuntimeAudioSource::IsReady()
 	return false;
 }
 
-void URuntimeAudioSource::clear()
-{
-	SoundWave->ResetAudio();
-}
-
 // Called when the game starts
 void URuntimeAudioSource::BeginPlay()
 {
 	Super::BeginPlay();
+}
+
+void URuntimeAudioSource::clear()
+{
+	SoundWave->ResetAudio();
 }

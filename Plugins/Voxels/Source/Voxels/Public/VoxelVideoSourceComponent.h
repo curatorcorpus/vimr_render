@@ -3,35 +3,32 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "Delegates/Delegate.h"
-#include "RuntimeAudioSource.h"
-#include "Voxels.h"
-#include "VoxelSourceInterface.h"
+#include "Engine/Engine.h"
+#include "Kismet/GameplayStatics.h"
+#include "Developer/DesktopPlatform/Public/IDesktopPlatform.h"
+#include "Developer/DesktopPlatform/Public/DesktopPlatformModule.h"
+#include "Editor/MainFrame/Public/Interfaces/IMainFrameModule.h"
+#include "Runtime/SlateCore/Public/Widgets/SWindow.h"
 #include "VoxelSourceBaseComponent.h"
-
-#include "VIMR/VoxelType.hpp"
-#include "VIMR/VideoPlayer.hpp"
-
+#include "VIMR/voxgrid.hpp"
+#include "VIMR/vidplayer.hpp"
+#include "RuntimeAudioSource.h"
 #include <functional>
-#include <map>
 #include <stack>
-#include <string>
-
-#include "VoxelVideoComponent.generated.h"
+#include "VoxelVideoSourceComponent.generated.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(VoxVidLog, All, All);
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlaybackFinished); // Macro for setting up dispatcher event. 
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
-class VOXELS_API UVoxelVideoComponent : public UVoxelSourceBaseComponent
+class VOXELS_API UVoxelVideoSourceComponent : public UVoxelSourceBaseComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UVoxelVideoComponent();
+	UVoxelVideoSourceComponent();
 
 	// UE4 METHODS
 
@@ -45,60 +42,49 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	
 	UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
-		void Pause();
+		void Pause(){cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoSourceComponent::_pause, this));}
 	UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
-		void Play();
+		void Play(){cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoSourceComponent::_play, this));}
 	UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
-		void Stop();
+		void Stop()	{cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoSourceComponent::_stop, this));}
 	UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
-		void Restart();
-	//UFUNCTION(BlueprintCallable, Category = "PlaybackControl")
-		//void SetLoop();
+		void Restart(){cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoSourceComponent::_restart, this));}
 
 	UFUNCTION(BlueprintCallable, Category = "FileManagement")
 		TArray<FString> GetAllRecordings();
 	UFUNCTION(BlueprintCallable, Category = "FileManagement")
 		void LoadVoxelVideo(FString filepath);
 
+
 	UPROPERTY(BlueprintAssignable, Category = "EventDispatchers")
 		FOnPlaybackFinished OnPlaybackFinished;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+		FString VideoFileName = "voxvid0.vx3";
+
 	UPROPERTY(BlueprintReadWrite,  EditAnywhere)
 		FString FileName;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-		bool PlaybackFinished = false;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-		bool IsPaused = false;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-		bool Looping = false;
 
 protected:
 
-	// Called when the game starts
-	virtual void BeginPlay() override;
-	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
-
-	void OnPlaybackFinishedEvent();
-
-	uint32_t MaxVoxels = 196608;
-	
+	FString baseRecordingPath;
 	FString voxelvideosPath;
 
+	virtual void BeginPlay() override;
+
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
 	typedef std::function<void(void)> PlaybackControlFnPtr;
+	std::stack<PlaybackControlFnPtr> cmdStack;
 
 	std::map<std::string, URuntimeAudioSource*> AudioStreams;
 
+	int NumAudioStreams = 0;
+
 	// DON'T instantate these things here. UBT can't handle it. Do it in BeginPlay
 	VIMR::VoxVidPlayer *VoxelVideoReader = nullptr;
-	VIMR::VoxelGrid* CurrentFrame = nullptr;
-	VIMR::VoxelGrid::Voxel* voxel = nullptr;
 
-	std::stack<PlaybackControlFnPtr> cmdStack;
-	std::stack<FVector> audioVoxStack;
-
-	// GAME-THREAD FUNCTIONS WHICH ARE INVOKED FOR VARIOUS PLAYBACK CONTROL ACTIONS
 	void _pause();
 	void _play();
 	void _stop();
 	void _restart();
-	void _setLoop(bool isLooping);
 };

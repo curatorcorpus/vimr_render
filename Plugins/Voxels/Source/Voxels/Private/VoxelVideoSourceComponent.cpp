@@ -2,19 +2,16 @@
 
 
 // Fill out your copyright notice in the Description page of Project Settings
-#include "VoxelVideoComponent.h"
-#include "VoxelRenderSubComponent.h"
-#include "Engine/Engine.h"
-#include "Kismet/GameplayStatics.h"
-#include "Developer/DesktopPlatform/Public/IDesktopPlatform.h"
-#include "Developer/DesktopPlatform/Public/DesktopPlatformModule.h"
-#include "Editor/MainFrame/Public/Interfaces/IMainFrameModule.h"
-#include "Runtime/SlateCore/Public/Widgets/SWindow.h"
-#include "Paths.h"
-
-#include "HAL/FileManager.h"
-
+#include "VoxelVideoSourceComponent.h"
+#include "Engine.h"
 #include <chrono>
+#include <string>
+#include "VoxelRenderSubComponent.h"
+#include <exception>
+#include "VIMR/vidplayer.hpp"
+
+#include "Paths.h"
+#include "HAL/FileManager.h"
 
 using namespace std::placeholders;
 using std::string;
@@ -22,16 +19,16 @@ using std::string;
 DEFINE_LOG_CATEGORY(VoxVidLog);
 
 // Sets default values for this component's properties
-UVoxelVideoComponent::UVoxelVideoComponent()
+UVoxelVideoSourceComponent::UVoxelVideoSourceComponent()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-	//OnPlaybackFinished.AddDynamic(this, &UVoxelVideoComponent::OnPlaybackFinishedEvent);
+	//OnPlaybackFinished.AddDynamic(this, &UVoxelVideoSourceComponent::OnPlaybackFinishedEvent);
 }
 
 // Called when the game starts
-void UVoxelVideoComponent::BeginPlay()
+void UVoxelVideoSourceComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -42,80 +39,62 @@ void UVoxelVideoComponent::BeginPlay()
 
 	if(VIMRconfig->GetString("SharedDataPath", &datapath, dplen))
 	{
-
 	}
-	else{
+	else
+	{
 		//Exit game?
 	}
+
+	LoadVoxelVideo(VideoFileName);
+	//Play();
 }
 
 // Called every frame
-void UVoxelVideoComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UVoxelVideoSourceComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	if (VoxelVideoReader != nullptr) {
+		if (VoxelVideoReader != nullptr) {
 		if (VoxelVideoReader->State() == VIMR::VoxVidPlayer::PlayState::Finished) {
-			OnPlaybackFinished.Broadcast();
-			_stop();
-			UE_LOG(VoxVidLog, Log, TEXT("Playback Finished"));
-			VoxelVideoReader->Close();
-		}
-		else if(VoxelVideoReader->State() == VIMR::VoxVidPlayer::PlayState::Paused) {
-			//UE_LOG(VoxVidLog, Log, TEXT("Playback is Paused"));
+			//Go to next video
 		}
 	}
 
-	if (!audioVoxStack.empty()) {
-		AudioStreams.begin()->second->SetWorldTransform(FTransform(audioVoxStack.top()));
-		audioVoxStack.pop();
-	}
-	else if (VoxelVideoReader->State() == VIMR::VoxVidPlayer::PlayState::Paused) {
-		//UE_LOG(VoxVidLog, Log, TEXT("Playback is Paused"));
-	}
-
-	if (!cmdStack.empty()) {
+	if (!cmdStack.empty()){
 		cmdStack.top()();
 		cmdStack.pop();
 	}
 }
 
-void UVoxelVideoComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
+void UVoxelVideoSourceComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 	VoxelVideoReader->Close();
 }
 
-void UVoxelVideoComponent::_pause()
+void UVoxelVideoSourceComponent::_pause()
 {
-	PlaybackFinished = false;
 	VoxelVideoReader->Pause();
-	IsPaused = true;
 	for (auto i : AudioStreams) {
 		i.second->Pause();
 	}
 }
 
-void UVoxelVideoComponent::_play()
+void UVoxelVideoSourceComponent::_play()
 {
-	IsPaused = false;
-	PlaybackFinished = false;
+	VoxelVideoReader->Play();
 	for (auto i : AudioStreams) {
 		i.second->Start();
 	}
-	VoxelVideoReader->Play();
 }
 
-void UVoxelVideoComponent::_stop()
+void UVoxelVideoSourceComponent::_stop()
 {
-	_pause();
 	_restart();
 	_pause();
 }
 
-void UVoxelVideoComponent::_restart()
+void UVoxelVideoSourceComponent::_restart()
 {
-	PlaybackFinished = false;
 	VoxelVideoReader->Restart();
 	for (auto i : AudioStreams) {
 		i.second->Stop();
@@ -123,15 +102,7 @@ void UVoxelVideoComponent::_restart()
 	}
 }
 
-void UVoxelVideoComponent::_setLoop(bool isLooping)
-{
-	if (VoxelVideoReader != NULL)
-	{
-		VoxelVideoReader->Loop(isLooping);
-	}
-}
-
-void UVoxelVideoComponent::LoadVoxelVideo(FString file)
+void UVoxelVideoSourceComponent::LoadVoxelVideo(FString file)
 {
 	if (VoxelVideoReader != nullptr)
 	{
@@ -149,8 +120,9 @@ void UVoxelVideoComponent::LoadVoxelVideo(FString file)
 
 	FString file_path = voxelvideosPath + FileName;
 
-	VoxelVideoReader = new VIMR::VoxVidPlayer(TCHAR_TO_ANSI(*file_path), std::bind(&UVoxelVideoComponent::CopyVoxelData, this, std::placeholders::_1));
-	VoxelVideoReader->Loop(true);
+	VoxelVideoReader = new VIMR::VoxVidPlayer(std::bind(&UVoxelSourceBaseComponent::CopyVoxelData, this, _1));
+	VoxelVideoReader->Load(TCHAR_TO_ANSI(*file_path));
+	VoxelVideoReader->Loop = false;
 	UE_LOG(VoxVidLog, Log, TEXT("Loaded file %s"), *file_path);
 
 	VIMR::AudioStream tmp_astrm;
@@ -170,7 +142,7 @@ void UVoxelVideoComponent::LoadVoxelVideo(FString file)
 	}
 }
 
-TArray<FString> UVoxelVideoComponent::GetAllRecordings()
+TArray<FString> UVoxelVideoSourceComponent::GetAllRecordings()
 {
 	TArray<FString> files;
 	files.Empty();
@@ -196,8 +168,3 @@ TArray<FString> UVoxelVideoComponent::GetAllRecordings()
 
 	return files;
 }
-
-void UVoxelVideoComponent::Pause() { cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoComponent::_pause, this)); }
-void UVoxelVideoComponent::Play() { cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoComponent::_play, this)); }
-void UVoxelVideoComponent::Stop() { cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoComponent::_stop, this)); }
-void UVoxelVideoComponent::Restart() { cmdStack.push((PlaybackControlFnPtr)std::bind(&UVoxelVideoComponent::_restart, this)); }
