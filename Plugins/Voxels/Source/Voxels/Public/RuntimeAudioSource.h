@@ -49,6 +49,11 @@ public:
 
 	void clear();
 
+	UAudioComponent* GetAudioComponent()
+	{
+		return AudioComponent;
+	}
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

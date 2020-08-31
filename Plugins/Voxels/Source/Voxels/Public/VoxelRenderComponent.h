@@ -16,10 +16,13 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable)
-	void SetScale(float Scale);
+		void SetScale(float Scale);
 
 	UFUNCTION(BlueprintCallable)
-	void SetLocation(FVector Location);
+		void SetLocation(FVector Location);
+
+	UFUNCTION(BlueprintCallable)
+		void SetRotation(FVector Rotation);
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Default)

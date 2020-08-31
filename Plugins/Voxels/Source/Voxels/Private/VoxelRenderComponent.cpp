@@ -132,3 +132,11 @@ void UVoxelRenderComponent::SetLocation(FVector Location)
 		VRSC->SetLocation(Location);
 	}
 }
+
+void UVoxelRenderComponent::SetRotation(FVector Rotation)
+{
+	for (auto& VRSC : VoxelRenderers)
+	{
+		VRSC->SetRotation(Rotation);
+	}
+}

@@ -29,6 +29,8 @@ public:
 
 	void SetLocation(FVector Location);
 
+	void SetRotation(FVector Rotation);
+
 private:
 	UPROPERTY()
 	UMaterialInterface* StaticMaterial;
@@ -50,6 +52,10 @@ private:
 
 	bool bQueueScale = false;
 	bool bQueueLocation = false;
+	bool bQueueRotation = false;
+
 	float Scale = 1.0f;
+
 	FVector Location = FVector(0.0f);
+	FVector Rotation = FVector(0.0f);
 };

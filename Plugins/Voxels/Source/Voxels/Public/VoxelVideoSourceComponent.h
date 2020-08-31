@@ -55,6 +55,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "FileManagement")
 		void LoadVoxelVideo(FString filepath);
 
+	UFUNCTION(BlueprintCallable)
+		void SetAudioLocation(FVector Location);
 
 	UPROPERTY(BlueprintAssignable, Category = "EventDispatchers")
 		FOnPlaybackFinished OnPlaybackFinished;

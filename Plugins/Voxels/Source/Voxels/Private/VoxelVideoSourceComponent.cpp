@@ -168,3 +168,11 @@ TArray<FString> UVoxelVideoSourceComponent::GetAllRecordings()
 
 	return files;
 }
+
+void UVoxelVideoSourceComponent::SetAudioLocation(FVector Location)
+{
+	for (auto as : AudioStreams) 
+	{
+		as.second->GetAudioComponent()->SetWorldLocation(Location);
+	}
+}
