@@ -19,7 +19,6 @@ UVoxelUDPSourceComponent::UVoxelUDPSourceComponent()
 	
 }
 
-
 // Called when the game starts
 void UVoxelUDPSourceComponent::BeginPlay()
 {
@@ -45,7 +44,6 @@ void UVoxelUDPSourceComponent::BeginPlay()
 			UE_LOG(VoxLog, Error, TEXT("Adding receiver %s  %s:%s"), *ClientConfigID, ANSI_TO_TCHAR(cliAddr), ANSI_TO_TCHAR(cliPort));
 		}
 	}
-
 
 	if (VIMRconfig->GetComponentConfigVal(TCHAR_TO_ANSI(*ClientConfigID), "PoseDests", &posedests, sln)) {
 		std::stringstream strmdsts_csv(posedests);
@@ -81,7 +79,6 @@ void UVoxelUDPSourceComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	Super::EndPlay(EndPlayReason);
 }
 
-
 // Called every frame
 void UVoxelUDPSourceComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
@@ -112,4 +109,3 @@ void UVoxelUDPSourceComponent::TickComponent(float DeltaTime, ELevelTick TickTyp
 		}
 	}
 }
-

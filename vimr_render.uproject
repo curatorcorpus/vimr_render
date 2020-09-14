@@ -37,6 +37,10 @@
 		{
 			"Name": "OnlineSubsystemOtago",
 			"Enabled": true
+		},
+		{
+			"Name": "Synthesis",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
@@ -46,12 +50,12 @@
 	"PostBuildSteps":
 	{
 		"Win64": [
-            "IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_voxels.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_voxels.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
-            "IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_network.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_network.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
-            "IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_voxvid.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_voxvid.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
-            "IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_async_serial.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_async_serial.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
-            "IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_config.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_config.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
-            "IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_cfg_unreal.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_cfg_unreal.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
+			"IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_voxels.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_voxels.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
+			"IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_network.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_network.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
+			"IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_voxvid.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_voxvid.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
+			"IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_async_serial.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_async_serial.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
+			"IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_config.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_config.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\"",
+			"IF NOT EXIST \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\vimr_cfg_unreal.dll\" copy /Y \"$(VIMR_ROOT_DEV)\\bin\\vimr_cfg_unreal.dll\" \"$(ProjectDir)\\Binaries\\$(TargetPlatform)\\\""
 		]
 	}
 }

@@ -15,6 +15,8 @@ UVoxelRenderComponent::UVoxelRenderComponent(const FObjectInitializer& ObjectIni
 		VRSC->SetupAttachment(GetAttachmentRoot());
 		VoxelRenderers.Add(VRSC);
 	}
+
+	bReplicates = true;
 }
 
 

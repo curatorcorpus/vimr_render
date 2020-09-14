@@ -146,7 +146,7 @@ void UVoxelSourceBaseComponent::BeginPlay()
 	UE_LOG(VoxLog, Log, TEXT("%s"), *startLogMsg);
 
 	VIMRconfig = new VIMR::Config::UnrealConfigWrapper();
-	FString localConfigFilePath = FPaths::ProjectDir() + FString("config.json");
+	FString localConfigFilePath = FPaths::ProjectDir() + FString("LocalConfig.json");
 
 	if (!VIMRconfig->Load(TCHAR_TO_ANSI(*localConfigFilePath))) {
 		FString msg = FString("Failed to load config file: ") + localConfigFilePath;

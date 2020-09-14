@@ -49,7 +49,6 @@ void URuntimeAudioSource::LoadWav(FString wavPath)
 		AudioComponent->bAllowSpatialization = true;
 		AudioComponent->bAutoDestroy = false;
 		AudioComponent->OnUpdateTransform(EUpdateTransformFlags::PropagateFromParent);
-		AudioComponent->SetIsReplicated(false);
 		//AudioComponent->SetFlags(RF_MarkAsNative);
 	}
 	else
@@ -58,6 +57,8 @@ void URuntimeAudioSource::LoadWav(FString wavPath)
 	FFileHelper::LoadFileToArray(audioData, wavPath.GetCharArray().GetData());
 	SoundWave->ResetAudio();
 	SoundWave->QueueAudio(audioData.GetData(), audioData.Num());
+
+	bReplicates = true;
 }
 
 void URuntimeAudioSource::Start()
