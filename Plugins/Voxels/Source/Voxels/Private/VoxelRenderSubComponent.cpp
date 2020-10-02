@@ -35,8 +35,6 @@ UVoxelRenderSubComponent::UVoxelRenderSubComponent()
 	UpdateTextureRegion = new FUpdateTextureRegion2D(0, 0, 0, 0, SUB_VOXEL_COUNT_SQR, SUB_VOXEL_COUNT_SQR);
 
 	EmptyData = new uint8[SUB_VOXEL_COUNT * VOXEL_TEXTURE_BPP]();
-
-	bReplicates = true;
 }
 
 void UVoxelRenderSubComponent::OnComponentDestroyed(bool bDestroyingHierarchy)
