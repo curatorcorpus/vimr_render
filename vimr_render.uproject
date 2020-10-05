@@ -33,6 +33,10 @@
 		{
 			"Name": "Synthesis",
 			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemOtago",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
